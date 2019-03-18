@@ -1,4 +1,4 @@
 print('Сколько времени вы будете принимать душ в минутах')
 time = int(input())
-bottles = 6*time
+bottles = 12*time
 print('Вам потребуется %s бутылок'%bottles)
