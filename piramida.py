@@ -17,7 +17,7 @@ while True:
     break
 
 a = height
-b=0
+b = 0
 while True:
     a = a - 1
     b = b + 1
