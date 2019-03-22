@@ -16,11 +16,11 @@ while True:
     else:continue
     break
 
-a = height+1
-b=1
+a = height
+b=0
 while True:
     a = a - 1
     b = b + 1
-    print(' '*a,'#'*b)
+    print(' '*a, '#'*b, '#', sep='')
     if (a == 0) or ( b == height):
         break
