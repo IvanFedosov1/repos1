@@ -7,7 +7,6 @@ def isint(s):
 
 
 while True:
-    с = 0
     print('Введите высоту пирамиды от 1 до 23')
     height = input()
     if isint(height) == True:None
