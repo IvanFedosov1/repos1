@@ -1,0 +1,26 @@
+import turtle
+
+a1 = turtle.Pen()
+#a2 = turtle.Pen()
+a3 = turtle.Pen()
+a4 = turtle.Pen()
+a1.right(180)
+a1.forward(100)
+a1.right(180)
+a3.right(180)
+a3.forward(50)
+a3.right(180)
+a4.right(180)
+a4.forward(150)
+a4.right(180)
+
+for x in range(0,73):
+    a1.forward(300)
+#    a2.forward(100)
+#    a2.right(175)
+    a1.left(175)
+    a3.forward(200)
+    a3.left(175)
+    a4.forward(400)
+    a4.left(175)
+input()
