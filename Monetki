@@ -1,0 +1,41 @@
+def test_na_delenie(число, делитель):
+    if число % делитель == 0:
+        return True
+    else:
+        return False
+
+
+a = 50
+b = 10
+c = 5
+z = 1
+summa = 0
+summb = 0
+summc = 0
+summz = 0
+sdacha = int(input('Введите сколько нужно выдать сдачи: '))
+while True:
+    if sdacha == 0: break
+    if test_na_delenie(sdacha, a) == True:
+        sdacha -= a
+        summa += 1
+        continue
+    if sdacha == 0: break
+    if test_na_delenie(sdacha, b) == True:
+        sdacha -= b
+        summb += 1
+        continue
+    if sdacha == 0: break
+    if test_na_delenie(sdacha, c) == True:
+        sdacha -= c
+        summc += 1
+        continue
+    if sdacha == 0: break
+    if test_na_delenie(sdacha, z) == True:
+        sdacha -= z
+        summz += 1
+        continue
+    if sdacha == 0: break
+
+print('Будет выдано {} монет номиналом 50, {} монет номиналом 10, {} монет номиналом 5, {} монет номиналом 1'.format(summa,summb,summc,summz))
+print('Всего получится %s монет'%(summa+summb+summc+summz))
