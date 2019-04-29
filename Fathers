@@ -1,0 +1,23 @@
+list = {'Harold Abelson': 'Logo',
+'Andrei Alexandrescu': 'C++',
+'Alfred Vaino Aho': 'AWK',
+'Guido van Rossum': 'Python',
+'Jeremy Ashkenas': 'CoffeeScript',
+'Walter Bright': 'D',
+'John George Kemeny': 'Basic',
+'Peter Naur': 'Algol',
+'Don Syme': 'F',
+'Kenneth Eugene Iverson': 'APL',
+}
+
+
+a = input('Введите Sort или Search\n')
+if a == 'Sort':
+    sortName = sorted(list.keys())
+    for element in sortName:
+        print(element, " - ", list[element])
+elif a == 'Search':
+    searchName = input(" Введите имя: \n")
+    for name in list.keys():
+        if name == searchName:
+            print(searchName, 'Разработал язык', list[name])
