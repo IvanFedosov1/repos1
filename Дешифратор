@@ -1,0 +1,31 @@
+alpha = ' abcdefghijklmnopqrstuvwxyz'
+alpha2 = ' абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
+
+a = input("для дешифрования русских слов введите: rus, для английских: eng\n")
+if a == "rus":
+    x = alpha2
+elif a == "eng":
+    x = alpha
+
+l = input("есть ключ, введите: key , для брутфорса введите: brut\n")
+if l == "key":
+    n = int(input("введите зерно дешифрования \n"))
+    s = input("введите текст \n").strip()
+    res = ''
+
+
+    for c in s:
+        res += x[(x.index(c) +len(x) - n) %len(x)]
+    print('Result: "' + res + '"')
+elif l == "brut":
+    s = input("введите текст \n").strip()
+    res = ''
+    n=0
+    for ind in x:
+        for c in s:
+
+            res += x[(x.index(c) + len(x) - n) % len(x)]
+        print('Result: "' + res + '"\n')
+        res =""
+        n+=1
+input()
