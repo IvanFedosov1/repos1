@@ -1,0 +1,18 @@
+alpha = ' abcdefghijklmnopqrstuvwxyz'
+alpha2 = ' абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
+
+a = input("для шифрования русских слов введите: rus, для английских: eng\n")
+if a == "rus":
+    x = alpha2
+elif a == "eng":
+    x = alpha
+
+
+n = int(input("введите зерно шифрования \n"))
+s = input("введите текст \n").strip()
+res = ''
+
+for c in s:
+    res += x[(x.index(c) + n) % len(x)]
+print('Result: "' + res + '"')
+input()
