@@ -1,0 +1,34 @@
+import re
+
+letter = input("Введите текст на русском для шифрования: ");
+
+
+while(True):
+    try:
+        key = input("Введите ключевое слово: ")
+        break
+    except:
+        print("Введён некоректный ключ")
+
+alpha = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
+alpha2 = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
+
+res = ""
+j = 0
+for i in letter:
+    if re.search(r"[0-9]", i):
+        res += i
+    else:
+        if i == " ":
+            res += " "
+        else:
+            if re.search(r"[А-Я]", i):
+                alpha2 += alpha2[(alpha2.index(i) + alpha.index(key[j])) % 33]
+            else:
+                res += alpha[(alpha.index(i) + alpha.index(key[j])) % 33]
+            if j == len(key) - 1:
+                j = 0
+            else:
+                j += 1
+
+print("Result: " + res)
